@@ -3,8 +3,8 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   // サイズを指定
-  const width = 960;
-  const height = 540;
+  const width = 500;
+  const height = 500;
 
   const canvasElement = document.querySelector('#myCanvasEarth');
   // レンダラーを作成
@@ -30,7 +30,6 @@ function init() {
   controls.dampingFactor = 0.02;
 
   // // 平行光源を作成
-  /* 使用例 */
   var directionalLight = new THREE.DirectionalLight(0xFFFFFF, 1.0); // 光源色と光強度を指定して生成
   directionalLight.position.set(20, 20, 100); // 光源位置を設定
   scene.add(directionalLight); // シーンに追加
