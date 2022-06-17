@@ -25,7 +25,8 @@ document.addEventListener("mousemove", (event) => {
     canvas: document.querySelector('#myCanvas')
   });
   renderer.setSize(width, height);
-
+  renderer.setClearColor( 0xffffff, 0);
+  
   // シーンを作成
   const scene = new THREE.Scene();
 
