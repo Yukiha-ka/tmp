@@ -25,7 +25,7 @@ function init() {
   // カメラコントローラーを作成
   const controls = new THREE.OrbitControls(camera, canvasElement);
 
-  // 滑らかにカメラコントローラーを制御する
+  // 滑らかにカメラコントローラーを制御
   controls.enableDamping = true;
   controls.dampingFactor = 0.02;
 
@@ -39,16 +39,16 @@ function init() {
     map: new THREE.TextureLoader().load('imgs/earthmap1k.jpg'),
   });
 
-  // 球体の形状を作成します
+  // 球体の形状を作成
   const geometry = new THREE.SphereGeometry(300, 30, 30);
-  // 形状とマテリアルからメッシュを作成します
+  // 形状とマテリアルからメッシュを作成
   const earthMesh = new THREE.Mesh(geometry, material);
-  // シーンにメッシュを追加します
+  // シーンにメッシュを追加
   scene.add(earthMesh);
 
   tick();
 
-  // 毎フレーム時に実行されるループイベントです
+  // 毎フレーム時に実行されるループイベント
   function tick() {
     // 地球は常に回転させておく
     earthMesh.rotation.y += 0.00001;
